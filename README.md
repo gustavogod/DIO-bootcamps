@@ -1,10 +1,14 @@
-# Livro de receitas :man_cook:
+# Projetos e cursos desenvolvidos
 
-Bem vindo ao meu livro de receitas.
+## Projetos
 
-- Strogonoff
+- **Netflix-clone**: em desenvolvimento. 
 
-- Pavê
 
-- Bolo
 
+## Cursos
+
+- Introdução a criação de websites com HTML5 e CSS3
+- JavaScript ES6 essencial
+- Introdução ao JavaScript - Programação para internet
+- Desenvolvimento avançado com JavaScript ES6

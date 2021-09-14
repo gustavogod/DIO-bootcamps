@@ -1,0 +1,225 @@
+/* Definição de variáveis dentro da raiz do documento
+Aqui, as cores principais do site já são definidas como variáveis, para facilitar o uso em outros elementos
+*/
+:root{
+    --vermelho: #e50914;
+    --preta: #141414;
+    --cinza: rgb(83, 83, 83);
+}
+
+/* RESET
+O asterisco define aquilo que vai valer para o documento todo
+É bom para definir manualmente elementos que os nevagadores definem por padrão,
+mas não necessariamente da mesma forma
+*/
+*{
+    margin: 0;
+    padding: 0;
+    /* define que os elementos dentro da caixa não pode ultrapassar as bordas da caixa */
+    box-sizing: border-box;
+}
+
+/* ELEMENTOS BASE */
+body{
+    background: var(--preta); /* Utilizando a variável definida no início do arquivo */
+    /* Primeiro é colocada a fronte principal, depois outras opções caso o navegador não suporte a primeira */
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+.top-container .logo-container{
+    background: linear-gradient(to bottom, rgba(0,0,0,.50)20%, #00000000);
+    display: block;
+}
+
+header .container{
+    display:flex; /* Permite a utilização de flexbox, usada para alinhar elementos em tela*/
+    flex-direction: row; /* Não faz diferença, pois por padrão, os elementos já são jogados para cima*/
+    align-items: center; /* Centralizar os items do menu*/
+    justify-content: space-between; /* justifica h2 e nav de forma horizontal */
+    flex-wrap: nowrap;
+}
+
+header .container .navigation{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .container .navigation .nav-left{
+    display:flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+body .logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+header .nav-right {
+    font-size: medium;
+}
+
+header nav a {
+    text-decoration: none; /* Tira a linha de baixo dos links */
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header .nav-right {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 4%;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+.top-container{
+    background: linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.40)100%), url('/img/capa-bb.jpg');
+    height: 400px;
+    /* fazer a área de background ter o tamanho da caixa na qual está inserida */
+    background-size: cover;
+}
+
+.profile-icon {
+    vertical-align: middle;
+    height: 32px;
+    width: 32;
+    border-radius: 4px;
+}
+
+.nav-rigth-item {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,.80),rgba(0,0,0,.80)100%);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 4%;
+    border-color: var(--cinza);
+    border-style: solid;  
+    border-width: 1px;
+    font-size: 14px;  
+}
+
+.dropdown-menu-box-profile {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.dropdown-menu-box-profile img{
+    margin-right: 5px;
+}
+
+.dropdown-menu-content-profiles {
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: var(--cinza); 
+}
+
+.dropdown-menu-content-other {
+    font-weight: bold;
+}
+
+.dropdown-menu-content span {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;    
+}
+
+.dropdown-menu-item {
+    margin: 10px 5px;
+}
+
+.dropdown-menu-item:hover {
+    text-decoration: underline;
+}
+
+.nav-dropdown-menu-button:hover .dropdown-menu-content {
+    display: block;
+}
+
+/* *********************************** */
+/* filme principal */
+.main-movie {
+    font-size: 16px;
+    /* o linear-gradient deixa a imagem de fundo com uma tonalidade mais escura
+    o gradient sempre precisa de mais de uma cor */
+
+    /* Formatação dos botões */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-movie .description {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.main-movie .title{
+    margin-top: 10%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.main-movie .container{
+    width: 80%;
+}
+
+.button {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    border-radius: 5px;
+
+    padding: 15px 90px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    /* com o cursor pointer, quando o mouve passa sobre o elemento o ponteiro do mouse muda p mãozinha*/
+    cursor: pointer;
+
+    transition: .3s ease all;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+}
+
+.button i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 4%;
+}
+
+.box-movie{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carousel-movies{
+    margin-top: 5px;
+}
