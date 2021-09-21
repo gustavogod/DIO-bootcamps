@@ -1,0 +1,77 @@
+--1º - Criar o arquivo webpack.config.js
+
+--2º Instalar em modo de desenvolvimento (-D ou --save-dev)
+
+$ npm i -D webpack webpack-cli
+
+--3º Adicionar o babel dentro do projeto
+
+$ npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+NÃO PRECISA DO babel-loader SE JÁ FOR INSTALAR O REACT, PODE DAR CONFLITO DE VERSÕES
+
+Elementos do comando:
+
+@babel/core e babel-loader  -> instalação dos plugins
+
+@babel/preset-env  -> Para especificar para o babel qual versão do JS está sendo usada, que é transpilada
+para o ES5. Com o preset-env, não é necessário informar versão do JS, que é transpilada automaticamente para o JS5
+
+@babel-react  -> para o babel tranpilar o react para o JS5
+
+--4º Colocar no webpack.config.js um módulo declarando o babel no loader que será utilizado para a transpilação
+
+--5º Pro webpack funcionar com o babel 
+    - Criar um arquivo .babelrc e adicionar o preset do babel
+    {
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+    }
+
+
+--6º Instalar o react-dom, se ainda não tiver instalado
+
+$ npm i react react-dom
+
+--7º Criar os arquivos src/index.js e src/App.jsx. Adicionar as importações e o comando de renderização
+no index 
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+ReactDOM.render(<App />, document.getElementById("app"));
+
+
+--9º Configurar o script de desenvolvimento no package.json
+    "dev": "webpack --mode development"
+
+
+--8º Executar
+    $ npm run dev
+
+--9º Instalar o plugin para HTML, e importar o plugin no webpack.config
+
+$ npm i -D html-webpack-plugin html-loader
+
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    })
+  ] 
+
+--10º Rodar o script do package.json do modo de produção
+    script ->>> "build": "webpack --mode production"
+    $ npm run build
+
+--11º Gerar um dev server pelo webpack, adicionar o scrip no json e executar o script
+
+$ npm i -D webpack-dev-server
+
+"start:dev": "webpack-dev-server --mode=development"
+// Se não setar o modo (desenvolvimento ou produção), ele fica dando warning na página
+
+$ npm run start:dev
