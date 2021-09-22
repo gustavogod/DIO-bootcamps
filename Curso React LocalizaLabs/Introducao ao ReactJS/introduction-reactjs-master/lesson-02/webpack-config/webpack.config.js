@@ -2,13 +2,11 @@ const path = require('path')
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  //devtool: 'source-map',
+  devtool: 'source-map',
   entry: './src/index.js',
   output: {
-    // __dirname é para pegar o diretório raiz do path
-    // gera uma pasta chamada dist, é o destino final do projeto
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundler.js', // arquivo final onde o projeto será empacotado e enviado para produção
+    filename: 'bundler.js'
   },
   module: {
     rules: [
@@ -26,6 +24,6 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html"
     })
-  ] 
-};
+  ]
+}
 

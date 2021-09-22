@@ -75,3 +75,15 @@ $ npm i -D webpack-dev-server
 // Se não setar o modo (desenvolvimento ou produção), ele fica dando warning na página
 
 $ npm run start:dev
+
+
+------------------------------------
+A configuração ->> devtool: 'source-map' <<- do arquivo webpack.config serve para 
+o webpack gerar um mapeamento dos arquivos para um modo de desenvolvimento.
+Assim fica bem mais simples a debugação do código com erros.
+
+
+---------------------------------------
+CONFIGURAÇÃO DO ESLINT
+
+npm install --save-dev eslint babel-eslint eslint-plugin-react eslint-watch
