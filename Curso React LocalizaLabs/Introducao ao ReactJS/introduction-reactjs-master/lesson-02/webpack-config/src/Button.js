@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Button = () => (
-  <button>Olá =D{a}</button>
-)
+  <button>Olá =D</button>
+);
 
-export default Button
+export default Button;
