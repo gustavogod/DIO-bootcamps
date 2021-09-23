@@ -23,7 +23,19 @@ const listCustomer = [
   }
 ]
 
+/* const showEvent = (e) => {
+  console.log('Evento clicado!');
+  console.log(e);
+}
+
+const Button = <button onClick={showEvent}>Mostrar evento</button> */
+
 const App = () => {
+
+/*   const handleChange = (e) => {
+    const { value } = e.target;
+    console.log(value);
+  } */
 
   const handleClick = (e, id) => {
     console.log('deletar cliente')
@@ -33,7 +45,9 @@ const App = () => {
   const renderCustomers = (customer, index) => {
     return (
       <div key={`customer-${customer.id}`}>
-        <li>{customer.name}  <button onClick={(e) => handleClick(e, customer.id)}>Deletar Cliente x</button></li>
+        <li>{customer.name}  
+          <button onClick={(e) => handleClick(e, customer.id)}>Deletar Cliente x</button>
+        </li>
         {customer.skills.map(renderSkills)}
       </div>
     )
@@ -60,3 +74,5 @@ const App = () => {
   );
 };
 export default App;
+//<input onChange={handleChange} />
+//  {Button}

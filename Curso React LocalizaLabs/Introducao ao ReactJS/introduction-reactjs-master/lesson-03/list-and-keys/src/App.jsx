@@ -26,6 +26,9 @@ const listCustomer = [
 const App = () => {
 
   const renderCustomers = (customer, index) => {
+    //Sempre colocar uma chave única quando for iterar elementos, inclusive para os elementos filhos
+    //A gente sempre deve ser única entre elementos irmãos
+    //Não é recomentado utilizar o index na key quando pode-se utilizar outro elemento (como um id, por ex)
     return (
       <div key={`customer-${customer.id}`}>
         <li>{customer.name}</li>

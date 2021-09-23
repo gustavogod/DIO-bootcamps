@@ -7,7 +7,7 @@ const buttonB = <button>Cadastrar Cliente</button>
 const hasCustomer = true
 
 const App = () => {
-
+  
   const renderShowHistory = (
     <div>
       Clique no botão abaixo para visualizar o histórico dos clientes
