@@ -1,0 +1,39 @@
+CSS em JS
+
+$ npm install --save styled-components
+
+
+Em HTML, <input>, <textarea> e <select> têm um estado interno, que, em React, 
+pode ser controlado (state e setState).
+Para isso, deve-se utilizar de forma conjunta os estados do DOM e do React
+
+
+Componente controlado: quando o estado é definido pelo React (pois pede ser definido pelo DOM tbm)
+- Atributo value pode ser alterado utilizado onChange
+
+Bibliotecas para lidar com forms em React:
+- Formik   -> recomendada pela documentação do React, principalmente para forms mais robustos
+- Redux-forms
+
+
+INSTALANDO O REDUX
+$ npm install react-redux
+$ npm install --save-dev redux-devtools   -> conectar a aplicação à extensão ReduxDevTools do chrome 
+
+
+-------TESTES--------
+ Jest já vem instalado no react quando o ambiente é criado com p create-react-app
+
+ para teste de componentes é usado o react-testing-library
+
+ yarn add --dev @testing-library/react
+
+ # para extensões de comparação no jest
+ yarn add --dev @testing-library/jest-dom/extend-expect
+
+------TESTE BDD-----
+Bibliotecas: jest-cucumber, chai
+
+yarn add --dev jest-cucumber
+
+-> instalar no vscode a extensão do cucumber para trabalhar com arquivos .feature

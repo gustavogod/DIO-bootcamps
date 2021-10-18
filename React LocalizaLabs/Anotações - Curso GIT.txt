@@ -1,0 +1,67 @@
+##Comandos para remover diretório recursivamente
+
+Windows: rmdir [diretório] /S /Q
+Linux: rm -rf [diretório]
+
+##
+##Gerar hash criptográfico de um arquivo com o algoritmo sha1
+
+linux: openssl sha1 [arquivo]
+
+##
+##Gerar o hash e já inserir o texto
+
+echo -e 'texto' | openssl sha1
+
+##
+##Exemplo de encriptação pela função do git
+
+echo 'texto' | git hash-object --stdin
+
+-> --stdin indica que a função espera receber um texto de entrada
+
+##
+##Os arquivos do git ficam armazenados no objeto Blob
+O Blob possui metadados como: o tipo Blob, tamanho do arquivo e o texto do arquivo em si
+Blob é o tipo básico de composição do git
+Blob armazena apenas o sha1 do arquivo correspondente (além do metadados)
+
+##
+## Objeto Tree -> uma árvore que aponta para objetos Blob
+Encapsula o comportamento de diretórios
+Metadados 
+\0
+Também tem um sha1 de seus metadados
+Sempre aponta para blobs ou para outras árvores
+- Exemplo de blob armazenado na Tree
+	blob sa4d82 texto.txt  = [tipo do arquivo] [sha1 do arquivo] [nome do arquivo]
+
+##
+## Objeto commit - indica uma alteração
+Aponta para:
+- Uma Tree
+- Um parente (último commit realizado)
+- Um autor
+- Mensagem de commit
+Possui como metadados um timestamp
+
+## Estágios dos arquivos
+## Quando arquivo atual do repositório é alterado, ele vai de unmodified para modified
+Quando é dado um ADD no arquivo, ele vira um arquivo Staged
+Quando é dado commit no arquivo staged, ele volta p unmodified
+
+Arquivo Untracked -> Quando o git não tem ciência da existência desse arquivo
+ex: quando arquivo acaba de ser criado ou quando um arquivo é excluído
+
+
+//---------------------------------------------------------------//
+###################	COMANDOS GIT	###########################
+>>>> Alterar configurações globais do ambiente de desenvolvimento
+git config --global user.name "gustavogod"
+git config --global user.email "gustavodias.god@gmail.com"
+
+>>>> linkar repositório local com um repositório remoto já existente
+git remote add origin [url do repositório]
+
+>>>>> Listar repositórios remotos cadastrados
+git remote -v

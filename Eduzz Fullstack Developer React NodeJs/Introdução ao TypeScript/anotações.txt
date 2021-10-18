@@ -1,0 +1,9 @@
+npm install parcel-bundler
+
+npx tsc --init //iniciar configurações do typescript
+
+npm i --save-dev @types/jquery //instalar para reconhecer os tipos do jQuery
+
+npm install gitignore //pacote com comandos para criar automaticamente o arquivo gitignore
+
+npx gitignore node // cria um arquivo gitignore padrão para trabalhar com node

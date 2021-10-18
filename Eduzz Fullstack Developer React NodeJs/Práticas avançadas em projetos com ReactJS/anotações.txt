@@ -1,0 +1,84 @@
+----------CICLO DE VIDA REACT---------------
+
+1º - Inicialização
+  Inicializa propriedades e estados iniciais do componente
+  props e state
+
+2º Montagem
+  1º componentWillMount  -> depreciado na versão 17 do react
+  2º render
+  3º componentDidMount
+
+3º Atualização
+  Sempre que há uma atualização nas states ou props do componente, ele é renderizado novamente
+  -props
+    1º componentWillReceiveProps  -> depreciado na versão 17 do react
+    2º shouldComponentUpdate -> (sim ou não) é feita uma verificação para ver se o componente deve mesmo ser atualizado
+    3º (sim) componentWillUpdate  -> depreciado na versão 17 do react
+    4º render
+    5º componentDidUpdate
+
+  -state
+    1º shouldComponentUpdate
+    2º (sim) componentWillUpdate  -> depreciado na versão 17 do react
+    3º render
+    4º componentDidUpdate
+
+4º Desmontagem
+   O react funciona de forma declarativa: ou o componente está presente ou não está
+   - componentWillUnmount
+   Depois disso ele é removido da árvore
+
+
+componentDidCatch -> quando o react quebra. Quando há uma excessão e pode-se capturar algum evento para tratá-lo
+
+shouldComponentUpdate -> retorna um booleano
+
+------------------------------------------------
+-----ORGANIZAÇÃO DE PROJETO REACT---------------
+
+App.js -> página inicial
+  rotas
+  providers
+  fluxo de autenticação
+  validação
+  tudo que for global de sistema
+  não coloco o componente diretamente, somente as rotas
+
+src
+  pasta components
+    pasta Button -> por ex
+      pasta __tests__ -> testar o Button
+        Button.test.js
+    arquivo index.js importanto todos os componentes que estão nas pastas e exportando de novo
+
+  pasta containers -> minhas páginas principais, que vai ser direcionadas no router
+    pasta Users
+    pasta Store
+    pasta Bank
+      components
+        BankLink.js
+      index.js
+    //Smart components que não são reutilizáveis podem ser criados direto em containers
+
+  pasta assets:
+    pasta imgs
+    pasta style -> css, style global
+
+  pasta commons  -> tudo que for comum ao sistema
+    pasta utils -> arquivos utilitários, coisas reutilizáveis no sistema
+      pasta __tests__  -> para fazer os tests da funções
+        string.test.js
+        ...
+      string.js -> setar strings utilizadas nos componentes, limpar/tratar strings, remover acentos/espaços
+      //funções utilitárias, como validação de CPF por ex
+      //funções devem ter responsabilidades únicas
+      //separar utilitários para diferentes funções
+    pasta constantes
+      menu.js  -> criar uma constante com todos os valores do menu
+                  nesse caso, é convensão o nome das constante em MAIÚSCULO
+
+  pasta routes  -> rotas do sistema. É uma boa prática exportar as rotas e renderizar a lista de rotas no App.js
+    index.js
+
+  pasta resources -> chamadas de serviço, APIs (api.js)
