@@ -25,7 +25,7 @@ function Twitter(props) {
     const { posts, loading } = props;
     console.log('componentDidMount', posts);
     console.log('componentDidMount:loading', loading);
-  })
+  }, [])
   
   //componentDidUpdate
   useEffect(() => {
