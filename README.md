@@ -2,7 +2,7 @@
 
 ## Projetos
 
-- [**Netflix-clone**](https://github.com/gustavogod/DIO-bootcamps/tree/master/Curso%20React%20LocalizaLabs/Projetos/netflix-clone): replicação da interface da página inicial da Netflix.
+- [**Netflix-clone**](https://github.com/gustavogod/netflix-clone): replicação da interface da página inicial da Netflix.
 - [**PokeGenius**](https://github.com/gustavogod/pokegenius): Minha versão do jogo Genius.
 - [**Naruto-quotes**](https://github.com/gustavogod/naturo-quotes): Gerador de frases aleatórias do Naruto.
 
