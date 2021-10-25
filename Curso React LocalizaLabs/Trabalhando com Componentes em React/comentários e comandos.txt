@@ -1,4 +1,0 @@
---CRIAR UMA APLICAÇÃO COM REACT
-
-$ npx create-react-app [nome do projeto (só minúsculas e sem espaços)]
-

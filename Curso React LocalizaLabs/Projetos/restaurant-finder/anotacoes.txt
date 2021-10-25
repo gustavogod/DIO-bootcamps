@@ -1,8 +1,0 @@
-/* vh (view height) e vw (view width)
-    - Atributo responsivo baseado no viewport (conteúdo visível do browser) para definir a altura e/ou
-    largura do componente de proporcionalmente à área visível da tela do browser*/
-
-css -> dica
-overflow-y: auto; 
-//Assim, o conteúdo do componente que extrapolar verticalmente pode ser scrollado pelo usuário
-// e com o auto, isso só vai acontecer quando tiver o conteúdo de fato
