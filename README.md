@@ -5,6 +5,7 @@
 - [**Netflix-clone**](https://github.com/gustavogod/netflix-clone): replicação da interface da página inicial da Netflix.
 - [**PokeGenius**](https://github.com/gustavogod/pokegenius): Minha versão do jogo Genius.
 - [**Naruto-quotes**](https://github.com/gustavogod/naturo-quotes): Gerador de frases aleatórias do Naruto.
+- [**Flex Turismos landing page**](https://github.com/gustavogod/flexbox-landing-page): Landing page responsiva criada apenas com CSS e HTML.
 
 
 
@@ -19,3 +20,4 @@
 - [JavaScript ES6 avançado](https://github.com/gustavogod/DIO-bootcamps/tree/master/Curso%20React%20LocalizaLabs/JS%20ES6%20avançado)
 - [Trabalhando com Componentes em React](https://github.com/gustavogod/DIO-bootcamps/tree/master/Curso%20React%20LocalizaLabs/Trabalhando%20com%20Componentes%20em%20React)
 - [Introdução ao TypeScript](https://github.com/gustavogod/DIO-bootcamps/tree/master/Eduzz%20Fullstack%20Developer%20React%20NodeJs/Introdução%20ao%20TypeScript)
+- [Posicionando elementos com Flexbox em CSS](https://github.com/gustavogod/DIO-bootcamps/tree/master/Impulso%20React%20Web%20Developer/Posicionando%20elementos%20com%20Flexbox%20em%20CSS)
