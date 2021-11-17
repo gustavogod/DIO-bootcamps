@@ -6,6 +6,7 @@
 - [**PokeGenius**](https://github.com/gustavogod/pokegenius): Minha versão do jogo Genius.
 - [**Naruto-quotes**](https://github.com/gustavogod/naturo-quotes): Gerador de frases aleatórias do Naruto.
 - [**Flex Turismos landing page**](https://github.com/gustavogod/flexbox-landing-page): Landing page responsiva criada apenas com CSS e HTML.
+- [**Jogo do dinossauro do Google Chrome**](https://github.com/gustavogod/dino-game): Minha versão do famoso jogo do dinossauro do Google Chrome.
 
 
 
